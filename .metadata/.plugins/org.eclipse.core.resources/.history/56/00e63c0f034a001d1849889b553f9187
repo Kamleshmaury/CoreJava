@@ -1,0 +1,14 @@
+package com.hops1;
+
+import java.io.File;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class StringToMap {
+	public static void main(String[] args) {
+		ObjectMapper objm = new ObjectMapper();
+		File file = new File("std.json");
+		
+	}
+
+}

@@ -1,0 +1,51 @@
+package com.hops2;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Retention(RetentionPolicy.RUNTIME)
+@JacksonAnnotationsInside
+@JsonInclude(value = Include.NON_NULL)
+//@JsonPropertyOrder({ "rollNo", "id", "name" })
+@interface CustomAnnotation
+{
+	
+}
+
+@CustomAnnotation
+class CollegeStudent
+{
+	int id;
+	int rollNo;
+	String name;
+	public CollegeStudent(int id, int rollNo, String name) {
+		this.id = id;
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	
+	
+}
+public class JacksonCustomAnnotation {
+	public static void main(String[] args) {
+		try
+		{
+			ObjectMapper mapper = new ObjectMapper();
+			CollegeStudent std = new CollegeStudent(101, 23, "Nitest Tiwari");
+			String str = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(std);
+			System.out.println(str);
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Some error"+ex);
+		}
+	}
+
+}

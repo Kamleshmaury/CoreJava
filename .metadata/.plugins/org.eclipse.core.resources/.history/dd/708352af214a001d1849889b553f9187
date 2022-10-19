@@ -1,0 +1,16 @@
+package com.hops1;
+
+import java.util.Scanner;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class ProductSerialization {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of product ");
+		int size = Integer.parseInt(sc.nextLine());
+		
+	}
+
+}

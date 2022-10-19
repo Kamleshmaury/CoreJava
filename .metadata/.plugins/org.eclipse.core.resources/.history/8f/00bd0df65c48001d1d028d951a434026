@@ -1,0 +1,16 @@
+package thread;
+
+class TestName extends Thread
+{
+	@Override
+	public void run() {
+		
+	}
+}
+
+public class ThreadName {
+	public static void main(String[] args) {
+		
+	}
+
+}

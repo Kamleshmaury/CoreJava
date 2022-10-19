@@ -1,0 +1,22 @@
+package com.hops2;
+
+class Book
+{
+	int id;
+	String name;
+	
+	public Book(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	
+}
+
+public class JsonBackAndJsonManageRefrence {
+	public static void main(String[] args) {
+		
+	}
+
+}

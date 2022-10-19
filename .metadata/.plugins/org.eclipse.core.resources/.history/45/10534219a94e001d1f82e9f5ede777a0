@@ -1,0 +1,32 @@
+package com.hops;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class EmployeeDao {
+	
+	public static void main(String[] args) {
+		System.out.println(save(new Employee("Ramu","12345","Ramu@gmail.com","India")));
+	}
+	
+	public static int save(Employee emp) {
+		int status=0;
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "insert into employee(name,password,Email,country) values(?,?,?,?)";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, emp.getName());
+			ps.setString(2, emp.getPassword());
+			ps.setString(3, emp.getEmail());
+			ps.setString(4, emp.getCountry());
+			
+			status = ps.executeUpdate() ;
+		}
+		catch(Exception ex) {
+			System.out.println("Some error in save employee"+ex);
+		}
+		return status;
+	}
+
+}

@@ -1,0 +1,15 @@
+package java8;
+
+class Arithmetic
+{
+	public static int add(int i, int j) {
+		return i+j;
+	}
+}
+
+public class MethodRefrenceDemo {
+
+	public static void main(String[] args) {
+		
+	}
+}

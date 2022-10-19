@@ -1,0 +1,11 @@
+{
+	"emp1":{
+		"id":1,
+		"name":"ravi",
+		"address":{
+			"street":"9th cross road",
+			"city":"bangalore",
+			"state":"Karnataka"
+		}
+	}
+}

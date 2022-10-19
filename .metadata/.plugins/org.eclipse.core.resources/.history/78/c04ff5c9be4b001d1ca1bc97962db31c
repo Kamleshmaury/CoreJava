@@ -1,0 +1,10 @@
+package java8;
+
+import java.util.StringJoiner;
+
+public class StringJionerDemo {
+	public static void main(String[] args) {
+		StringJoiner joiner = new StringJoiner(",");
+	}
+
+}

@@ -1,0 +1,8 @@
+package thread;
+
+public class ThreadName {
+	public static void main(String[] args) {
+		
+	}
+
+}

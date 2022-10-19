@@ -1,0 +1,20 @@
+package com.hops;
+
+import java.sql.Connection;
+
+public class EmployeeDao {
+	
+	public static int save(Employee emp) {
+		int status=0;
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "insert into employee(name,password,email,country) values(?,?,?,?)";
+			
+		}
+		catch(Exception ex) {
+			System.out.println("Some error"+ex);
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.hops2;
+class Person
+{
+	String personName;
+	int personId;
+	
+	
+	
+}
+public class JsonSetterGetter {
+	public static void main(String[] args) {
+		
+	}
+
+}

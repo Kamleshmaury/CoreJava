@@ -1,0 +1,21 @@
+package com.hops;
+
+/**
+ * User Model class
+ * @author kamlesh.maurya
+ *
+ */
+
+public class User {
+	
+	int id;
+	String username;
+	String password;
+	
+	/**
+     * Creates a new user
+     * @param username unique username of the user
+     * @param password password of the user
+     */
+	
+}

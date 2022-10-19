@@ -1,0 +1,10 @@
+package com.hops1;
+
+public class Product {
+	private String proId;
+	private String proName;
+	private String price;
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.hops;
+
+public class ReadDataFromJson {
+	public static void main(String[] args) {
+		
+	}
+
+}

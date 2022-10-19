@@ -1,0 +1,39 @@
+package com.hops1;
+
+import java.util.List;
+
+public class Player {
+	private String playerId;
+	private String playerName;
+	private List<String> playerScores;
+
+	public String getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = playerId;
+	}
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public List<String> getPlayerScores() {
+		return playerScores;
+	}
+
+	public void setPlayerScores(List<String> playerScores) {
+		this.playerScores = playerScores;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [playerId=" + playerId + ", playerName=" + playerName + ", playerScores=" + playerScores + "]";
+	}
+
+}

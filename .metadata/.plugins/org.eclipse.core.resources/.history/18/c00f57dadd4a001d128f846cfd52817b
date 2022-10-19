@@ -1,0 +1,18 @@
+package com.hops2;
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+class Empl
+{
+	public int id;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-mm-yyyy")
+	public Date birthDate; 
+}
+public class JsonFormatTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+{
+	"employee": {
+		"name": "sagar",
+		"salary": 23000,
+		"age": 24
+	},
+	"employee1": {
+		"name": "sagar",
+		"salary": 23000,
+		"age": 24
+	}
+}

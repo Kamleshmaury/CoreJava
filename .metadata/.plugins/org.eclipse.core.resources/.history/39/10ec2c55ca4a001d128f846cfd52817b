@@ -1,0 +1,85 @@
+package com.hops2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+class Student4 {
+	public int rollNo;
+	String name;
+	
+	@JsonBackReference
+	List<Book> books;
+
+	public Student4(int rollNo, String name) {
+		super();
+		this.rollNo = rollNo;
+		this.name = name;
+		this.books = new ArrayList<Book>();
+	}
+
+	public void addBook(Book book) {
+		books.add(book);
+	}
+
+}
+
+class Book {
+	int id;
+	String name;
+
+	@JsonManagedReference
+	public Student4 owner;
+
+	public Book(int id, String name, Student4 owner) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.owner = owner;
+	}
+
+}
+
+public class JsonBackAndJsonManageRefrence {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		Student4 s4 = new Student4(101, "Rakesh Maurya");
+		//Student4 s5 = new Student4(102, "Neetu");
+		Book book1 = new Book(1,"Learn HTML", s4);
+	    Book book2 = new Book(1,"Learn JAVA", s4);
+	    
+	    s4.addBook(book1);
+	    s4.addBook(book2);
+	    try {
+			String str = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(s4);
+			System.out.println(str);
+		} 
+	    catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

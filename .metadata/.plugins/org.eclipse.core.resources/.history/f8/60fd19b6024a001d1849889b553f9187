@@ -1,0 +1,8 @@
+package com.hops1;
+
+public class StringToMap {
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+1664781616478	Rename type 'Has_A'
+1664793948930	Delete element
+1664857370045	Rename type 'A'
+1664869475928	Rename type 'MutableSTring'
+1664877313356	Rename type 'M6'
+1664877529253	Rename type 'M5'
+1664877548287	Rename type 'M4'
+1664877578702	Rename type 'M3'
+1664877597765	Rename type 'M2'
+1664877620227	Rename type 'M1'
+1664880047093	Rename type 'ExceptionOverriding'
+1664887593018	Rename compilation unit 'StrictfDemo.java'
+1664943556633	Rename type 'StaticInnerClass'
+1664951035421	Rename type 'HashSet'
+1664954131549	Infer generic type arguments
+1664970570017	Delete element
+1664971941146	Delete element
+1665030256127	Delete element
+1665030276159	Rename type 'CreateFIle'
+1665031757566	Delete element
+1665034089676	Rename type 'BufferedDemo'
+1665035460080	Rename type 'AppendContentDeleteFile'
+1665040086313	Rename type 'FindFileInFolder'
+1665043300694	Rename type 'FileDateModified'
+1665049289040	Rename type 'FileContentVariable'
+1665120669059	Rename type 'DynamicObjectSave'
+1665120803291	Delete element
+1665123779262	Delete element
+1665129668145	Copy compilation unit
+1665136659124	Delete element
+1665139875295	Rename type 'CopyDirectory'
+1665144725398	Rename type 'ThreadSleep'
+1665145006840	Rename compilation unit 'LifeCycleOfThread.java'
+1665145150603	Rename type 'Test'

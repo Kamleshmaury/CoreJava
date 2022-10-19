@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;Web-app1/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;rd&apos;&#x0D;&#x0A;- Destination element: &apos;Web-app1/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     WelcomeServlet.java&#x0D;&#x0A;     FirstServlet.java&#x0D;&#x0A;     LoginDao.java" description="Copy compilation units" destination="=Web-app1/src\/main\/java" element1="/src&lt;{WelcomeServlet.java" element2="/src&lt;{FirstServlet.java" element3="/src&lt;{LoginDao.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1665493606474" units="3" version="1.0"/>
+</session>

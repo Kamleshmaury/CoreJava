@@ -1,0 +1,28 @@
+package com.hops;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class GetPassword {
+	
+	public static void main(String[] args) {
+		System.out.println(getPassword("kam@gmail.com"));
+	}
+	
+	public static String getPassword(String user) {
+		try {
+			Connection con = Util.getConnection();
+			String s1 = "select password from user1 where username = ?";
+			PreparedStatement pstmt = con.prepareStatement(s1);
+			pstmt.setString(1, user);
+			ResultSet rs = pstmt.executeQuery();
+			System.out.println(rs.getString(3));
+		}
+		catch(Exception ex) {
+			System.out.println(ex);
+		}
+		
+	}
+
+}

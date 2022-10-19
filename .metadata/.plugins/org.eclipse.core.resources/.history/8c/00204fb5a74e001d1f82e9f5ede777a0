@@ -1,0 +1,9 @@
+package com.hops;
+
+public class EmployeeDao {
+	
+	public static int save(Employee emp) {
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.hops2;
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+class Empl
+{
+	public int id;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+	public Date birthDate;
+	public Empl(int id, Date birthDate) {
+		super();
+		this.id = id;
+		this.birthDate = birthDate;
+	} 
+	
+	
+}
+public class JsonFormatTest {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		Empl emp = new Empl(1, new Date("20-12-1984"));
+	}
+
+}

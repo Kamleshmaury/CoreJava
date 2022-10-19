@@ -1,0 +1,31 @@
+package com.hops2;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+class Student4
+{
+	
+}
+class Book
+{
+	int id;
+	String name;
+	
+	@JsonManagedReference
+	public Student4 owner;
+	public Book(int id, String name, Student4 owner) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.owner = owner;
+	}
+	
+	
+}
+
+public class JsonBackAndJsonManageRefrence {
+	public static void main(String[] args) {
+		
+	}
+
+}

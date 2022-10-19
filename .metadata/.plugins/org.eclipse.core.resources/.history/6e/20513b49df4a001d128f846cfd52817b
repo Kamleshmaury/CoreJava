@@ -1,0 +1,48 @@
+package com.hops2;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+class Person
+{
+	String personName;
+	int personId;
+	
+	public Person(String personName, int personId) {
+		super();
+		this.personName = personName;
+		this.personId = personId;
+	}
+
+	public String getPersonName() {
+		return personName;
+	}
+
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+	
+	
+	
+}
+public class JsonSetterGetter {
+	public static void main(String[] args) {
+		try
+		{
+			ObjectMapper mapper = new ObjectMapper();
+			Person p1 = new Person("Ramu", 101);
+			String str = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(p1);
+		}
+		catch(Exception ex) {
+			System.out.println("Some problem "+ex);
+		}
+	}
+
+}

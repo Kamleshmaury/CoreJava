@@ -1,0 +1,44 @@
+package com.hops2;
+
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ser.FilterProvider;
+import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
+
+@JsonFilter("thename")
+class Student6
+{
+	@JsonProperty("Stdname")
+	int id;
+	int rollNo;
+	String name;
+	public Student6(int id, int rollNo, String name) {
+		super();
+		this.id = id;
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	
+}
+
+public class JsonFilterTest {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		Student6 s6 = new Student6(1, 354, "Rohan");
+		
+		FilterProvider provider = new SimpleFilterProvider().addFilter("thename", SimpleBeanPropertyFilter.filterOutAllExcept("name"));
+		try {
+			String str = mapper.writer(provider).withDefaultPrettyPrinter().writeValueAsString(s6);
+			System.out.println(str);
+		}
+		catch (JsonProcessingException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

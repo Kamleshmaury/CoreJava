@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="login" method="get">
+		<table>
+			<tr>
+				<td>User Name:</td>
+				<td><input type="text" name="usName" /></td>
+			</tr>
+			<tr>
+				<td>User Password:</td>
+				<td><input type="password" name="usPass" /></td>
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

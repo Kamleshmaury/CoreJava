@@ -1,0 +1,8 @@
+package com.hops2;
+@interface CustomAnnotation
+{
+	
+}
+public class JacksonCustomAnnotation {
+
+}

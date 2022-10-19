@@ -1,0 +1,19 @@
+package com.hops;
+
+public class Student {
+	String name;
+	String phone;
+	String city;
+	long studentId;
+	
+	public Student(String name, String phone, String city, long studentId) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.city = city;
+		this.studentId = studentId;
+	}
+	
+	
+
+}

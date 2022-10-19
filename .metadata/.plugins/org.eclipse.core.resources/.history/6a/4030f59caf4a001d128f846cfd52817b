@@ -1,0 +1,13 @@
+package com.hops1;
+
+import java.io.File;
+
+import org.codehaus.jackson.JsonFactory;
+
+public class JsonParser {
+	public static void main(String[] args) {
+		JsonFactory factory = new JsonFactory();
+		JsonParser parser = factory.createJsonParser(new File("sports.json"));
+	}
+
+}

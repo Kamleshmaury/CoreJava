@@ -1,0 +1,8 @@
+package thread;
+
+public class JoiningThread {
+	public static void main(String[] args) {
+		
+	}
+}
+//one thread wait until another thread finish the task

@@ -1,0 +1,19 @@
+package com.hops;
+
+import java.io.FileReader;
+
+import com.google.gson.JsonParser;
+
+public class ReadDataFromJson {
+	public static void main(String[] args) {
+		try{
+			JsonParser parser = new JsonParser();
+			Object obj = parser.parse(new FileReader("std.json"));
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+	}
+
+}

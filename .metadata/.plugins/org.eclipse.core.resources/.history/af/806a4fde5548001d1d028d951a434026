@@ -1,0 +1,13 @@
+package thread;
+
+public class Util {
+	
+	public static void sleep(long milli) {
+		try {
+			Thread.sleep(milli);
+		}
+		catch(InterruptedException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

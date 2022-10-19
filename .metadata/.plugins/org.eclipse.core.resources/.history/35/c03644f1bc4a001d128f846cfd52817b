@@ -1,0 +1,21 @@
+package com.hops2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Student {
+	
+	Map<String, String> map;
+	
+	public Student() {
+		map = new HashMap<>();
+	}
+	
+	public Map<String,String> getProperties(){
+		return map;
+	}
+
+	public void add(String name, String value) {
+		map.put(name, value);
+	}
+}

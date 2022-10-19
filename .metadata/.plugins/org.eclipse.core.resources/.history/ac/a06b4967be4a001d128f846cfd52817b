@@ -1,0 +1,22 @@
+package com.hops2;
+
+import com.fasterxml.jackson.annotation.JsonGetter;
+
+public class Student1 {
+	private String name;
+	   private int rollNo;
+	   public Student1(String name, int rollNo){
+	      this.name = name;
+	      this.rollNo = rollNo;
+	   }
+	   @JsonGetter
+	   public String getStudentName(){
+	      return name;
+	   }
+	   public int getRollNo(){
+	      return rollNo;
+	   }
+	
+	
+
+}

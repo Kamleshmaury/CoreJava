@@ -1,0 +1,9 @@
+package com.hops2;
+
+public class Student1 {
+	private String name;
+	private String rollNo;
+	
+	
+
+}

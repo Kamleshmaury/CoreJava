@@ -1,0 +1,6 @@
+package thread;
+
+public class JoiningThread {
+	
+}
+//one thread wait until another thread finish the task

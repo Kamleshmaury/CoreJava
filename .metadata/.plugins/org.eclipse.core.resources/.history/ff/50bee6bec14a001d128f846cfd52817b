@@ -1,0 +1,12 @@
+package com.hops2;
+class Employee
+{
+	public String name;
+	public int rollNo;
+}
+public class JacksonInjectAnno {
+	public static void main(String[] args) {
+		
+	}
+
+}

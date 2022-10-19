@@ -1,0 +1,10 @@
+{
+	"Colors": [
+		"Red",
+		"Black",
+		"White"
+	],
+	"Car": "Honda City",
+	"Price": "1600000",
+	"Model": "base"
+}

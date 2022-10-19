@@ -1,0 +1,38 @@
+package java8;
+
+@FunctionalInterface
+interface Addition
+{
+	int add(int i, int j);
+}
+
+public class FunctionalInterfaceDemo {
+	public static void main(String[] args) {
+		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("Form runnable...");
+			}
+		}).start();
+		
+		Addition a1 = new Addition() {
+			@Override
+			public int add(int i, int j) {
+				return i+j;
+			}
+			
+		};
+		System.out.println(a1.add(10, 20));
+		
+		new Addition() {
+			
+			@Override
+			public int add(int i, int j) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+	}
+
+}

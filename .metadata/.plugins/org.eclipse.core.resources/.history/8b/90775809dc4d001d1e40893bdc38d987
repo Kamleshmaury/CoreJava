@@ -1,0 +1,59 @@
+package com.hops;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+		
+		try {
+			resp.setContentType("text/html");
+			PrintWriter pw = resp.getWriter();
+			HttpSession session = req.getSession();
+			String user = req.getParameter("usName");
+			String password = req.getParameter("usPass");
+			
+			Connection con = Util.getConnection();
+			String s1= "select username from users where usernaem=? and password=?";
+			 
+			PreparedStatement pstmt = con.prepareStatement(s1);
+			pstmt.setString(1, user);
+			pstmt.setString(2, password);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				RequestDispatcher rq = req.getRequestDispatcher("welcome.jsp");
+				rq.forward(req, resp);
+			}
+			else
+			{
+				pw.println("<font color=red size=18>Login Failed!!>br>");
+				pw.print("<a href=login.jsp>Try AGAIN!</a>");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+
+}

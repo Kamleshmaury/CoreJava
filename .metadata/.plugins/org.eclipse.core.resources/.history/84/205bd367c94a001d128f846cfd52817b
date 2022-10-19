@@ -1,0 +1,25 @@
+package com.hops2;
+class Student4
+{
+	
+}
+class Book
+{
+	int id;
+	String name;
+	public Student4 owner;
+	public Book(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	
+}
+
+public class JsonBackAndJsonManageRefrence {
+	public static void main(String[] args) {
+		
+	}
+
+}

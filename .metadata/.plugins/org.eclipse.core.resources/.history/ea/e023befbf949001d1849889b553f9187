@@ -1,0 +1,18 @@
+package com.hops;
+
+import java.io.FileReader;
+
+import org.json.simple.JSONObject;
+
+public class ReadDataFromJson {
+	public static void main(String[] args) {
+		try{
+			JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("std.json"));
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+	}
+
+}

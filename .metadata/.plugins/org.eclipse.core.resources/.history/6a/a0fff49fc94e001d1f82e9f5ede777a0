@@ -1,0 +1,32 @@
+package com.hops;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+
+@WebServlet("/RegistrationServlet")
+public class RegistrationServlet extends HttpServlet{
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		PrintWriter pw = response.getWriter();
+		response.setContentType("text/html");
+		pw.println("<h1>Welcome to Register </h1>");
+		
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String gender = request.getParameter("gender");
+		String course = request.getParameter("course");
+		String con = request.getParameter("condition");
+		
+		if(con.equals("checked")) {
+			
+		}
+	}
+
+}

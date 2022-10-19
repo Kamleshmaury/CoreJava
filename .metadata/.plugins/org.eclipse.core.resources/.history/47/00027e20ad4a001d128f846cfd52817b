@@ -1,0 +1,40 @@
+package com.hops1;
+
+import java.io.File;
+import java.io.IOException;
+
+import com.fasterxml.jackson.core.JsonEncoding;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonGenerator;
+
+public class JacksonStreamJsonGenrtor {
+	public static void main(String[] args) {
+
+		try {
+			JsonFactory factory = new JsonFactory();
+			JsonGenerator jsonGenerator = factory.createGenerator(new File("demopro.json"), JsonEncoding.UTF8);
+			jsonGenerator.writeStartObject();
+			jsonGenerator.writeStringField("Name", "Ramu");
+			jsonGenerator.writeNumberField("Age", 25);
+			
+			//
+			jsonGenerator.writeFieldName("FavouriteSports");
+			jsonGenerator.writeStartArray();
+			jsonGenerator.writeString("Footbal");
+			jsonGenerator.writeString("Cricket");
+			jsonGenerator.writeString("Hockey");
+			jsonGenerator.writeString("Chess");
+			jsonGenerator.writeEndArray();
+			
+			jsonGenerator.writeEndObject();
+			System.out.println("File created with name demopro.json");
+			jsonGenerator.close();
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+}

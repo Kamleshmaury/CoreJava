@@ -1,0 +1,11 @@
+package com.hops2;
+class Empl
+{
+	
+}
+public class JsonFormatTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

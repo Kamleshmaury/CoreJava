@@ -1,0 +1,5 @@
+package com.hops2;
+
+public class JacksonInjectAnno {
+
+}

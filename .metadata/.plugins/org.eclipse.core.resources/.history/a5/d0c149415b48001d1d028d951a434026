@@ -1,0 +1,29 @@
+package thread;
+class ThreadJion extends Thread
+{
+	public void run() {
+		for(int i=0; i<2;i++) {
+			Util.sleep(300);
+			System.out.println("Current Thread name is : "+Thread.currentThread().getName());
+			System.out.println(i);
+		}
+	}
+}
+public class JoiningThread {
+	public static void main(String[] args) {
+		ThreadJion th1 = new ThreadJion();
+		ThreadJion th2 = new ThreadJion();
+		ThreadJion th3 = new ThreadJion();
+		
+		th1.start();
+		try {
+			System.out.println("Current Thread name is : "+Thread.currentThread().getName());
+			th1.join();
+		}
+		catch(InterruptedException ex) {
+			System.out.println("The exception has been caught " + ex);  
+		}
+		th2.start();
+	}
+}
+//one thread wait until another thread finish the task

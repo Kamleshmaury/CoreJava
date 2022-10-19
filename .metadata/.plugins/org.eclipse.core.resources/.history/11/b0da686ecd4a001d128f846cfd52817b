@@ -1,0 +1,23 @@
+package com.hops2;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+class Student5
+{
+	String name;
+	int rollNo;
+	
+	@JsonCreator
+	public Student5(@JsonProperty("thename") String name,@JsonProperty("id") int rollNo) {
+		this.name = name;
+		this.rollNo = rollNo;
+	}
+}
+
+public class JsonCreatorTest {
+	public static void main(String[] args) {
+		String json = 
+	}
+
+}

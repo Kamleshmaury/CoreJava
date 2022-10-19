@@ -1,0 +1,24 @@
+package thread;
+
+class Thread1 extends Thread
+{
+	@Override
+	public void run() {
+		System.out.println("Thread 1...");
+	}
+}
+
+class Thread2 extends Thread
+{
+	@Override
+	public void run() {
+		System.out.println("Thread 2...");
+	}
+}
+
+public class MultipleTaskByMultipleThread {
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package java8;
+
+import java.util.StringJoiner;
+
+public class StringJionerDemo {
+	public static void main(String[] args) {
+		StringJoiner joiner = new StringJoiner(",");
+		joiner.add("abc");
+		joiner.add("demo");
+		joiner.add("test");
+		System.out.println(joiner);
+	}
+
+}

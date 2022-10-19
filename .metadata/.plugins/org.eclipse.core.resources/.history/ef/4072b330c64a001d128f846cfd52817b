@@ -1,0 +1,88 @@
+package com.hops2;
+class Address
+{
+	private String firstLine;
+	private String secondLine;
+	private String thirdLine;
+	public Address(String firstLine, String secondLine, String thirdLine) {
+		super();
+		this.firstLine = firstLine;
+		this.secondLine = secondLine;
+		this.thirdLine = thirdLine;
+	}
+	
+	public String getFirstLine() {
+		return firstLine;
+	}
+	public String getSecondLine() {
+		return secondLine;
+	}
+	public String getThirdLine() {
+		return thirdLine;
+	}
+}
+
+class Name
+{
+	private String firstName;
+	private String secondName;
+	public Name(String firstName, String secondName) {
+		super();
+		this.firstName = firstName;
+		this.secondName = secondName;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getSecondName() {
+		return secondName;
+	}
+	
+	
+}
+
+class Student2
+{
+	private Address address;
+	private Name name;
+	private Boolean isActive;
+	public Student2(Address address, Name name, Boolean isActive) {
+		super();
+		this.address = address;
+		this.name = name;
+		this.isActive = isActive;
+	}
+	
+}
+public class JsonAutoDetectTest {
+	public static void main(String[] args) {
+		 Address address = new Address("Madhapur", "Hyderabad", "Telangana");
+	      Name name = new Name("Raja", "Ramesh");
+	      Student2 std = new Student2(address, name, true);
+	      
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

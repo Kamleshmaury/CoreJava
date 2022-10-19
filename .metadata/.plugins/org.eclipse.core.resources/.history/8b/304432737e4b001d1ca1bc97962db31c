@@ -1,0 +1,8 @@
+package com.hops;
+
+public class UserImpl {
+	public static void main(String[] args) {
+		
+	}
+
+}

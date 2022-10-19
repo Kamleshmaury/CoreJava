@@ -1,0 +1,17 @@
+package com.hops1;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ReadAndWriteJson {
+	public static void main(String[] args) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("name", "kapil dev");
+		map.put("Age", 26);
+		map.put("city", "Bangalore");
+		
+		
+		
+	}
+
+}

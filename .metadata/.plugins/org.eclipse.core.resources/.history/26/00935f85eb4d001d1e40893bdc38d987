@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="login" method="get">
+		<table>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="firstName" /></td>
+			</tr>
+			<tr>
+				<td>Last Name </td>
+				<td><input type="password" name="lastName" /></td>
+			</tr>
+			
+			<tr>
+				<td>Phone</td>
+				<td><input type="password" name="phone" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

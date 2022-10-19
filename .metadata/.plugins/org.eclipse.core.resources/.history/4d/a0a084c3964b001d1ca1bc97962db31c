@@ -1,0 +1,17 @@
+package java8;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StreamAPiDemo {
+	public static void main(String[] args) {
+		 List<ProductAdd> productsList = new ArrayList<ProductAdd>();  
+	        //Adding Products  
+	        productsList.add(new ProductAdd(1,"HP Laptop",25000));  
+	        productsList.add(new ProductAdd(2,"Dell Laptop",30000));  
+	        productsList.add(new ProductAdd(3,"Lenevo Laptop",28000));  
+	        productsList.add(new ProductAdd(4,"Sony Laptop",28000));  
+	        productsList.add(new ProductAdd(5,"Apple Laptop",90000));  
+	}
+
+}

@@ -1,0 +1,28 @@
+package java8;
+
+import java.util.Arrays;
+import java.util.List;
+
+@FunctionalInterface
+interface Draw {
+	void draw(int width);
+}
+
+interface Say {
+	String say();
+}
+
+public class LambdaDemo {
+	public static void main(String[] args) {
+		Draw d1 = (a) -> System.out.println("draw rectangle.width - " + a);
+		d1.draw(10);
+
+		Say s1 = () -> {
+			return "Hi from lambda...";
+		};
+		System.out.println(s1.say());
+		List<String> list = Arrays.asList("hello","test","hi","to");
+		list.forEach(a -> System.out.println(a));
+	}
+
+}

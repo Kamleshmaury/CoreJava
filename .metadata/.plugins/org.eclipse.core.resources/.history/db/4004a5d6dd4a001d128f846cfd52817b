@@ -1,0 +1,15 @@
+package com.hops2;
+
+import java.util.Date;
+
+class Empl
+{
+	public int id;
+	public Date birthDate; 
+}
+public class JsonFormatTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

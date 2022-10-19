@@ -1,0 +1,21 @@
+package java8;
+
+@FunctionalInterface 
+interface Draw
+{
+	void draw(int width);
+}
+
+interface Say
+{
+	String say();
+}
+public class LambdaDemo {
+	public static void main(String[] args) {
+		Draw d1 = (a) -> System.out.println("draw rectangle.width - "+a);
+		d1.draw(10);
+		
+		Say s1 = () -> return "Hi from lambda...";
+	}
+
+}

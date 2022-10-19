@@ -1,0 +1,15 @@
+package thread;
+
+class TestName extends Thread
+{
+	public void run() {
+		System.out.println("running...");
+	}
+}
+
+public class ThreadName {
+	public static void main(String[] args) {
+		
+	}
+
+}

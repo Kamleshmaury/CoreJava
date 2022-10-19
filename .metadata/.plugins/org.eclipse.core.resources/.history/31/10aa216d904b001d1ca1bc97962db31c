@@ -1,0 +1,14 @@
+package java8;
+
+
+interface Draw
+{
+	void draw();
+}
+
+public class LambdaDemo {
+	public static void main(String[] args) {
+		
+	}
+
+}

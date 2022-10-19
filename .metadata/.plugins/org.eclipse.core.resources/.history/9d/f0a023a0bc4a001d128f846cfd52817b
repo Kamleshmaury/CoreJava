@@ -1,0 +1,8 @@
+package com.hops2;
+
+public class JacksonAnnotationDemo {
+	public static void main(String[] args) {
+		
+	}
+
+}

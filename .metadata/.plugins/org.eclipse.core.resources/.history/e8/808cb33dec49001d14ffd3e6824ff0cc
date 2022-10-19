@@ -1,0 +1,15 @@
+package com.hops;
+
+import com.google.gson.Gson;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello from maven");
+		
+		Student st1 = new Student("Kamlesh", "976843567", "gujrat", 13680L);
+		Gson son = new Gson();
+		String str = son.toJson(st1);
+		System.out.println(str);
+	}
+
+}

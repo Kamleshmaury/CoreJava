@@ -1,0 +1,116 @@
+package com.hops;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class EmployeeDao {
+	
+	public static void main(String[] args) {
+		System.out.println(save(new Employee("Ramu","12345","Ramu@gmail.com","India")));
+	}
+	
+	public static int save(Employee emp) {
+		int status=0;
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "insert into employee(name,password,Email,country) values(?,?,?,?)";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, emp.getName());
+			ps.setString(2, emp.getPassword());
+			ps.setString(3, emp.getEmail());
+			ps.setString(4, emp.getCountry());
+			
+			status = ps.executeUpdate() ;
+		}
+		catch(Exception ex) {
+			System.out.println("Some error in save employee"+ex);
+		}
+		return status;
+	}
+	
+	public static int update(Employee emp) {
+		int status=0;
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "update employee set name=?,password=?,Email=?,country=? where id =?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, emp.getName());
+			ps.setString(2, emp.getPassword());
+			ps.setString(3, emp.getEmail());
+			ps.setString(4, emp.getCountry());
+			ps.setInt(5, emp.getId());
+			
+			status = ps.executeUpdate() ;
+		}
+		catch(Exception ex) {
+			System.out.println("Some error in update employee"+ex);
+		}
+		return status;
+	}
+
+	public static int delete(int id) {
+		int status=0;
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "delete from employee where id = ?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			status = ps.executeUpdate();
+		}
+		catch(Exception ex)
+		{
+			System.out.println("error in delete "+ex);
+		}
+		return status;
+	}
+	
+	public static int getEmployeeById(int id) {
+		Employee emp = new Employee();
+		try
+		{
+			Connection con = Util.getConnection();
+			String sql = "select * from employee where id = ?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				emp.setId(rs.getInt(1));
+				emp.setName(rs.getString(2));
+				emp.setPassword(rs.getString(3));
+				emp.setEmail(rs.getString(4));
+				emp.setCountry(rs.getString(5));
+			}
+		}
+		catch(Exception ex)
+		{
+			System.out.println("error in get by id "+ex);
+		}
+		return emp;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

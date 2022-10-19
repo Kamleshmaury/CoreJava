@@ -1,0 +1,15 @@
+package java8;
+
+
+interface Draw
+{
+	void draw();
+}
+
+public class LambdaDemo {
+	public static void main(String[] args) {
+		Draw d1 = () -> System.out.println("draw rectangle..");
+		d1.draw();
+	}
+
+}

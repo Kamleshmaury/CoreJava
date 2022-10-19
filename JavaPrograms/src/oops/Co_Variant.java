@@ -1,0 +1,28 @@
+package oops;
+
+class A1
+{
+	A1 get() {
+		System.out.println("From A");
+		return this;
+	}
+}
+class B1 extends A1
+{
+	@Override
+	B1 get() {
+		System.out.println("From B");
+		return this;
+	}
+}
+
+public class Co_Variant {
+	public static void main(String[] args) {
+		A1 a1 = new A1();
+		a1.get();
+		B1 b1 = new B1();
+		b1.get();
+	}
+
+}
+//

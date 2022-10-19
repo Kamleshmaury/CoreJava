@@ -1,0 +1,23 @@
+package com.hops2;
+
+import com.fasterxml.jackson.annotation.JsonFilter;
+
+@JsonFilter("name")
+class Student6
+{
+	int id;
+	int rollNo;
+	String name;
+	public Student6(int id, int rollNo, String name) {
+		super();
+		this.id = id;
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	
+}
+
+public class JsonFilterTest {
+
+}

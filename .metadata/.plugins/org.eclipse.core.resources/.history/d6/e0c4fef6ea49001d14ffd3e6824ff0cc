@@ -1,0 +1,11 @@
+package com.hops;
+
+public class Student {
+	String name;
+	String phone;
+	String city;
+	long studentId;
+	
+	
+
+}

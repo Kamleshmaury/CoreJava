@@ -1,0 +1,22 @@
+package com.hops2;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class Student1Main {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		Student1 s1 = new Student1("Rahul Kumar", 25);
+		
+		try {
+			String str1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(s1);
+			System.out.println(str1);
+		} 
+		catch (JsonProcessingException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+}

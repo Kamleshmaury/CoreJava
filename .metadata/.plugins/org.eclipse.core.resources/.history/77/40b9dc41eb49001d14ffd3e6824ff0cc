@@ -1,0 +1,10 @@
+package com.hops;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello from maven");
+		
+		Student st1 = new Student("Kamlesh", "976843567", "gujrat", 1);
+	}
+
+}

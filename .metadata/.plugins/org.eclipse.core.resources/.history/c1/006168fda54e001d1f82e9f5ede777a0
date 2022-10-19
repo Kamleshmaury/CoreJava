@@ -1,0 +1,8 @@
+package com.hops;
+
+public class User {
+	private int id;
+	String name,password,email,country;
+	
+	
+}

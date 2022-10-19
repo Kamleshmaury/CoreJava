@@ -1,0 +1,26 @@
+package com.hops1;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class ReadAndWriteJson {
+	public static void main(String[] args) {
+
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			Map<String, Object> map = new HashMap<>();
+			map.put("name", "kapil dev");
+			map.put("Age", 26);
+			map.put("city", "Bangalore");
+			mapper.writerWithDefaultPrettyPrinter().writeValue(new File("demo.json"), map);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.hops2;
+
+class Student6
+{
+	int id;
+	int rollNo;
+	String name;
+	public Student6(int id, int rollNo, String name) {
+		super();
+		this.id = id;
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	
+}
+
+public class JsonFilterTest {
+
+}

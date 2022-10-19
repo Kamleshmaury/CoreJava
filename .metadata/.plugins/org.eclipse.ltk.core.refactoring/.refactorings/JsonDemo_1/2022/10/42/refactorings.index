@@ -1,0 +1,19 @@
+1665554790621	Delete element
+1665555737464	Rename resource 'ArraysNested.json'
+1665556841605	Rename type 'Main'
+1665559469100	Infer generic type arguments
+1665561903229	Rename type 'StringToMap'
+1665566959967	Rename type 'JsonStringToMap'
+1665573278985	Rename type 'ObjectSerialization'
+1665574824421	Rename type 'ProductSerialization'
+1665575284509	Infer generic type arguments
+1665575287755	Infer generic type arguments
+1665575294247	Infer generic type arguments
+1665575297690	Infer generic type arguments
+1665575359384	Infer generic type arguments
+1665575365041	Infer generic type arguments
+1665576347232	Rename type 'ProductIntoJson'
+1665634304148	Delete element
+1665639931901	Rename type 'JacksonAnnotation'
+1665641383360	Rename type 'JacksonAnnotationDemo'
+1665643847699	Rename type 'StudentMain'

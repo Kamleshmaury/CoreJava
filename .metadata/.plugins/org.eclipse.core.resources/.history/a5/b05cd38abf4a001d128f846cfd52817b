@@ -1,0 +1,20 @@
+package com.hops2;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class Student1Main {
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+	      try {
+	         Student1 student = new Student1("Mark", 1);
+	         String jsonString = mapper
+	            .writerWithDefaultPrettyPrinter()
+	            .writeValueAsString(student);
+	         System.out.println(jsonString);
+	      }
+	      catch (Exception e) {
+	         e.printStackTrace();
+	      }
+	   }
+
+}

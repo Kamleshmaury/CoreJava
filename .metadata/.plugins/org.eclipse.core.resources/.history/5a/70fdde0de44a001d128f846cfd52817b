@@ -1,0 +1,32 @@
+package com.hops2;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+class CollegeStudent {
+	int id;
+	int rollNo;
+	String name;
+
+	public CollegeStudent(int id, int rollNo, String name) {
+		this.id = id;
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+}
+
+public class JacksonCustomAnnotation {
+	public static void main(String[] args) {
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			CollegeStudent student = new CollegeStudent(1, 13, "Mark");
+			
+			String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(student);
+			System.out.println(jsonString);
+
+		} catch (Exception ex) {
+			System.out.println("Some error" + ex);
+		}
+	}
+
+}

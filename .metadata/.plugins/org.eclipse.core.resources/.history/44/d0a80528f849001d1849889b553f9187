@@ -1,0 +1,27 @@
+package com.hops;
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+
+import com.google.gson.Gson;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello from maven");
+		
+		Student st1 = new Student("Kamlesh", "976843567", "gujrat", 13680L);
+		Student st2 = new Student("rahul", "346789", "lucknow", 268078L);
+		ArrayList<Student> list = new ArrayList<Student>();
+		list.add(st1);
+		list.add(st2);
+		
+		PrintWriter pw = new PrintWriter(new FileWriter("std.json")); 
+		
+		Gson son = new Gson();
+		String str = son.toJson(list);
+		System.out.println(str);
+	}
+
+}

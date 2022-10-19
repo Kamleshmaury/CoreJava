@@ -1,0 +1,45 @@
+package com.hops;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+		
+		try
+		{
+			String sql = "select username from user1 where username=? and password=?";
+			Connection con = Util.getConnection();
+			String name = request.getParameter("usName");
+			String password = request.getParameter("usPass");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				RequestDispatcher rq = request.getRequestDispatcher("welcome.jsp");
+				rq.forward(request, response);
+			}
+			
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Some erro "+ex);
+		}
+	}
+
+}
